@@ -1,38 +1,210 @@
-.App {
+.button3 {
+  display: inline-block;
+  padding: 0.3em 0.1em;
+  margin: 0 0.1em 0.1em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: black;
   text-align: center;
+  transition: all 0.2s;
+}
+.button3:hover {
+  background-color: #02131d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand-logo {
+  font-family: "Satisfy", cursive;
+  color: whitesmoke;
+  /* font-size: 3rem !important; */
+  /* font-weight: bold; */
+  /* margin-left: 80px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  text-decoration: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ul span {
+  font-size: 1.5rem;
   color: white;
+  font-weight: bold !important;
+}
+/* ul span {
+  font-size: 1.5rem;
+  color: #948e94;
+} */
+
+/* .mylogo:hover {
+  color: purple !important;
+  text-shadow: -4px 1px 9px white;
+} */
+
+h5 {
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+/* a {
+  color: black !important;
+} */
+/* li {
+  list-style-type: none;
+} */
+.myfoot {
+  z-index: 1000;
+  /* 
+  display: flex;
+  flex-direction: column; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mynavli.li:hover {
+  color: black;
+}
+
+.mybg {
+  background-color: rgba(223, 221, 211, 0.48);
+  /* opacity: 0.5; */
+  z-index: -1;
+}
+
+.mynav {
+  /* border-bottom: 1px solid black; */
+  z-index: 100;
+  /* background-color: #424242 !important; */
+  /* background: rgba(45, 45, 45, 0.6) !important; */
+  background-color: black !important;
+}
+
+.home-div {
+  background: rgba(45, 45, 45, 0.6) !important;
+}
+
+.body-container {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+}
+
+.home-page {
+  flex: 1 0 auto;
+}
+
+/* footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+} */
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+
+  opacity: 0;
+  z-index: -1;
+  animation: imageAnimation 40s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url(./images/1.png);
+}
+.slideshow li:nth-child(2) {
+  background-image: url(./images/2.png);
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url(./images/4.png);
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url(./images/5.png);
+  animation-delay: 30s;
+}
+/* .slideshow li:nth-child(5) {
+  background-image: url(./images/3.jpg);
+  animation-delay: 40s;
+} */
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
   }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+.mybtn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.mybtn:hover,
+.mybtn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.home-button {
+  border-color: purple; /*#3498db earlier */
+  color: #fff;
+  box-shadow: 0 0 40px 40px purple inset, 0 0 0 0 purple;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  margin: 30px auto;
+}
+.home-button:hover {
+  box-shadow: 0 0 10px 0 purple inset, 0 0 10px 4px purple;
 }
